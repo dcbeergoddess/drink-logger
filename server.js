@@ -60,17 +60,7 @@ app.post("/", function (req, res) {
 
 
 //UPADTE DRINKS
-app.get("/api/:id", function (req, res) {
-  connection.query("UPDATE drink SET ? WHERE ?",
-    [
-      { imbibed: true },
-      { id: req.params.id }
-    ],
-    function (err, res) {
-      if (err) throw err;
-    }
-  );
-});
+
 
 
 //LISTEN    

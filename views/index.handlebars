@@ -1,13 +1,11 @@
-<h1>Imbibe a Drink And Relax!</h1>
+<h1>IMBIBE A DRINK AND RELAX!</h1>
 
 <div class="fresh">
   <h3>Fresh Drinks</h3>
   <ul>
   {{#each drinks}}
   	<li>
-  	   <p>ID: {{id}}</p>
-       <p>DRINK: {{drink}}</p>
-       <p>IMBIBED: {{imbibed}}</p>
+       <p>ON DECK: {{drink}}</p>
   	</li>
   {{/each}}
 </ul>
@@ -15,22 +13,18 @@
 
 
 <div class="imbibed">
-  <h3>Devoured Burger</h3>
+  <h3>Drank</h3>
   <ul>
-  {{#each drinks}}
-  	<li>
-  	   <p>ID: {{id}}</p>
-       <p>DRINK: {{drink}}</p>
-       <p>IMBIBED: {{imbibed}}</p>
-  	</li>
-  {{/each}}
-</ul>
+    <li>
+      <p>ALL GONE: </p>
+    </li>
+  </ul>
 </div>
 
 <div class="addDrink">
   <form action="/" method="POST">
     <textarea type="text" name="drink"></textarea>
     <br>
-    <button type="submit">SUBMIT</button>
+    <button type="submit">ORDER A DRINK!</button>
   </form>
 </div>
