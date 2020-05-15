@@ -1,6 +1,7 @@
-USE nameDB;
+USE drink_db;
 
-INSERT INTO tables (item, category, starting_num, price, quantity)
-VALUES ("example1", "food", 1, 2.50, 100), ("example2", "drink", 2, 4.50, 100);
+INSERT INTO drinks (drink, imbibed)
+VALUES ("WEST COAST STYLE IPA", 0), ("MARGARITA", 0), ("OLD FASHIONED W/ RYE WHISKEY", 1);
 
-SELECT * FROM tables;
+
+SELECT * FROM drink_db.drinks;

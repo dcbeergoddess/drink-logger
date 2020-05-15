@@ -1,13 +1,10 @@
-DROP DATABASE IF EXISTS name_DB;
-CREATE DATABASE nameDB;
+DROP DATABASE IF EXISTS drink_db;
+CREATE DATABASE drink_db;
 
-USE nameDB;
+USE drink_db;
 
-CREATE TABLE tables (
+CREATE TABLE drinks (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  item VARCHAR(100) NULL,
-  category VARCHAR(45) NULL,
-  starting_num INT default 0,
-  price DECIMAL(10,2) NULL,
-  quantity INT NULL
+  drink VARCHAR(100) NOT NULL,
+  imbibed BOOLEAN DEFAULT FALSE
 );
