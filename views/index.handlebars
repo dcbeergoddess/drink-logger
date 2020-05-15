@@ -1,32 +1,38 @@
 <h1>IMBIBE AND RELAX!</h1>
 
-<div class="fresh">
-  <h3>Fresh Drinks</h3>
-  <ul>
-  {{#each orderedDrink}}
-  	<li>
-       <p>ON DECK: {{drink}}</p>
-  	</li>
-  {{/each}}
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-6 fresh">
+      <h3>Fresh Drinks</h3>
+      {{#each orderedDrink}}
+      <div class="card imbibeDrink">
+        <form action "/" method="POST">
+          <p>ON DECK: {{drink}}</p>
+          <button type="submit" class="btn btn-primary">IMBIBE!</button>
+        </form>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="col-6 imbibed">
+      <h3>ALL GONE!</h3>
+      {{#each imbibedDrink}}
+      <div class="card">
+        <p>ALL GONE: {{drink}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
 </div>
 
-
-<div class="imbibed">
-  <h3>Drank</h3>
-  <ul>
-    {{#each imbibedDrink}}
-    <li>
-      <p>ALL GONE: {{drink}}</p>
-    </li>
-     {{/each}}
-  </ul>
-</div>
-
-<div class="addDrink">
-  <form action="/" method="POST">
-    <textarea type="text" name="drink"></textarea>
-    <br>
-    <button type="submit">ORDER A DRINK!</button>
-  </form>
+<div class="container" id="addDrink">
+  <div class="row">
+    <div class="col-6">
+      <form action="/" method="POST">
+        <textarea type="text" name="drink"></textarea>
+        <br>
+        <button type="submit">ORDER A DRINK!</button>
+      </form>
+    </div>
+  </div>
 </div>

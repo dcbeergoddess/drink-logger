@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DrinX</title>
 
-  <!-- We link our html to the Bootstrap CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DrinX</title>
+
+	<!-- We link our html to the Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
 </head>
+
 <body>
 
-  <body>
-	<div id="viewport">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					{{!-- three curly brackets in layouts --}}
-					{{{ body }}}
-					{{!-- tells handlebars to insert whatever template the route specifies --}}
+	<body>
+		<div id="viewport">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						{{!-- three curly brackets in layouts --}}
+						{{{ body }}}
+						{{!-- tells handlebars to insert whatever template the route specifies --}}
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
-</body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			$(".imbibe-btn").on("click", function () {
+				const drink = $(this).attr("drink.imbibe");
+			});
+		</script>
+
+	</body>
+
 </html>
