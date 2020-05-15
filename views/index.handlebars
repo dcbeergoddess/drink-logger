@@ -1,9 +1,9 @@
-<h1>IMBIBE A DRINK AND RELAX!</h1>
+<h1>IMBIBE AND RELAX!</h1>
 
 <div class="fresh">
   <h3>Fresh Drinks</h3>
   <ul>
-  {{#each drinks}}
+  {{#each orderedDrink}}
   	<li>
        <p>ON DECK: {{drink}}</p>
   	</li>
@@ -15,9 +15,11 @@
 <div class="imbibed">
   <h3>Drank</h3>
   <ul>
+    {{#each imbibedDrink}}
     <li>
-      <p>ALL GONE: </p>
+      <p>ALL GONE: {{drink}}</p>
     </li>
+     {{/each}}
   </ul>
 </div>
 

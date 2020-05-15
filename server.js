@@ -42,11 +42,16 @@ connection.connect(function (err) {
 app.get("/", function (req, res) {
   connection.query("SELECT * FROM drinks;", function (err, data) {
     if (err) throw err;
-    //NEED TO BREAK DATA DOWN TO JUST HAVE DRINK INFO, using this to test for now
-    res.render("index", { drinks: data });
-  });
+    const orderedDrink = []
+    const imbibedDrink = [];
+    for (var i = 0; i < data.length; i++ ) {
+      if (data[i].imbibed) {
+        imbibedDrink.push(data[i])
+      } else orderedDrink.push(data[i])
+    }
+    res.render("index", { orderedDrink: orderedDrink , imbibedDrink: imbibedDrink });
+  })
 });
-
 
 
 //POST/INSERT DRINKS ==============================
