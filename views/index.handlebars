@@ -6,10 +6,10 @@
       <h3>Fresh Drinks</h3>
       {{#each orderedDrink}}
       <div class="card imbibeDrink">
-        <form action "/" method="POST">
+        {{!-- <form action "/" method="POST"> --}}
           <p>ON DECK: {{drink}}</p>
           <button type="submit" class="btn btn-primary">IMBIBE!</button>
-        </form>
+        {{!-- </form> --}}
       </div>
       {{/each}}
     </div>
